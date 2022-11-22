@@ -1,0 +1,49 @@
+{
+    "metrics": [
+        [ "AWS/RDS", "CPUUtilization", "DBInstanceIdentifier", "mysql", { "visible": false } ],
+        [ ".", "FreeStorageSpace", ".", ".", { "visible": false } ],
+        [ ".", "FreeableMemory", ".", ".", { "visible": false } ],
+        [ ".", "SwapUsage", ".", ".", { "visible": false } ],
+        [ ".", "WriteThroughput", ".", ".", { "visible": false } ],
+        [ ".", "ReadThroughput", ".", ".", { "visible": false } ],
+        [ "AWS/Lambda", "Errors", "FunctionName", "latest_order_dev", { "visible": false } ],
+        [ ".", "Duration", ".", ".", { "visible": false } ],
+        [ "AWS/RDS", "CPUCreditBalance", "DBInstanceIdentifier", "mysql", { "visible": false } ],
+        [ ".", "WriteIOPS", ".", ".", { "visible": false } ],
+        [ ".", "ReadIOPS", ".", ".", { "visible": false } ],
+        [ ".", "DatabaseConnections", ".", "." ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "yAxis": {
+        "left": {
+            "label": "",
+            "min": 0,
+            "max": 66
+        }
+    },
+    "annotations": {
+        "horizontal": [
+            {
+                "visible": true,
+                "label": "WARNING",
+                "value": 50,
+                "fill": "above"
+            },
+            {
+                "visible": true,
+                "label": "CRITICAL",
+                "value": 60,
+                "fill": "above"
+            }
+        ]
+    },
+    "view": "timeSeries",
+    "stacked": false,
+    "stat": "Average",
+    "period": 300,
+    "width": 1800,
+    "height": 700,
+    "start": "2021-04-08T07:00:00.000Z",
+    "end": "2021-04-08T08:30:00.000Z"
+}

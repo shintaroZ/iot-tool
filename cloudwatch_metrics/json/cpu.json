@@ -1,0 +1,32 @@
+{
+    "view": "timeSeries",
+    "stacked": false,
+    "metrics": [
+        [ "AWS/RDS", "CPUUtilization", "DBInstanceIdentifier", "mysql" ]
+    ],
+    "yAxis": {
+        "left": {
+            "min": 0,
+            "max": 100,
+            "label": ""
+        }
+    },
+    "annotations": {
+        "horizontal": [
+            {
+                "label": "WARNING",
+                "value": 80,
+                "fill": "above"
+            },
+            {
+                "label": "CRITICAL",
+                "value": 90,
+                "fill": "above"
+            }
+        ]
+    },
+    "width": 1600,
+    "height": 700,
+    "start": "2021-04-06T05:00:00.000Z",
+    "end": "2021-04-06T05:59:00.000Z"
+}

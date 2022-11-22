@@ -1,0 +1,45 @@
+{
+    "metrics": [
+        [ { "expression": "SEARCH('{AWS/RDS,DBInstanceIdentifier} SwapUsage', 'Average', 300)", "id": "e1", "period": 300, "visible": false } ],
+        [ "AWS/RDS", "FreeStorageSpace", "DBInstanceIdentifier", "mysql", { "id": "m2", "visible": false } ],
+        [ ".", "WriteIOPS", ".", ".", { "id": "m5", "visible": false } ],
+        [ ".", "WriteThroughput", ".", ".", { "id": "m6", "visible": false } ],
+        [ ".", "ReadThroughput", ".", ".", { "id": "m1", "visible": false } ],
+        [ "AWS/Lambda", "Errors", "FunctionName", "latest_order_dev", { "id": "m3", "visible": false } ],
+        [ ".", "Duration", ".", ".", { "id": "m4", "visible": false } ],
+        [ "AWS/RDS", "CPUCreditBalance", "DBInstanceIdentifier", "mysql", { "id": "m7" } ],
+        [ ".", "CPUCreditUsage", ".", ".", { "id": "m8" } ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "yAxis": {
+        "left": {
+            "label": "",
+            "min": 0
+        }
+    },
+    "annotations": {
+        "horizontal": [
+            {
+                "visible": true,
+                "label": "WARNING",
+                "value": 20,
+                "fill": "below"
+            },
+            {
+                "visible": true,
+                "label": "CRITICAL",
+                "value": 10,
+                "fill": "below"
+            }
+        ]
+    },
+    "stat": "Average",
+    "period": 300,
+    "title": "CPUCredit",
+    "setPeriodToTimeRange": true,
+    "width": 1800,
+    "height": 700,
+    "start": "2021-04-03T00:00:00.000Z",
+    "end": "2021-04-03T23:59:59.000Z"
+}

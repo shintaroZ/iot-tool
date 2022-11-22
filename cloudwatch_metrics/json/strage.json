@@ -1,0 +1,40 @@
+{
+    "metrics": [
+        [ "AWS/RDS", "CPUUtilization", "DBInstanceIdentifier", "mysql", { "visible": false } ],
+        [ ".", "FreeStorageSpace", ".", "." ],
+        [ ".", "FreeableMemory", ".", ".", { "visible": false } ],
+        [ ".", "SwapUsage", ".", ".", { "visible": false } ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "yAxis": {
+        "left": {
+            "label": "",
+            "min": 0,
+            "max": 21474836480
+        }
+    },
+    "annotations": {
+        "horizontal": [
+            {
+                "visible": true,
+                "label": "WARNING",
+                "value": 2147483648,
+                "fill": "below"
+            },
+            {
+                "visible": true,
+                "label": "CRITICAL",
+                "value": 1073741824,
+                "fill": "below"
+            }
+        ]
+    },
+    "stat": "Average",
+    "period": 300,
+    "setPeriodToTimeRange": true,
+    "width": 1600,
+    "height": 700,
+    "start": "2021-04-06T05:00:00.000Z",
+    "end": "2021-04-06T05:59:00.000Z"
+}

@@ -1,0 +1,41 @@
+{
+    "metrics": [
+        [ { "expression": "SEARCH('{AWS/RDS,DBInstanceIdentifier} SwapUsage', 'Average', 300)", "id": "e1", "period": 300, "visible": false } ],
+        [ "AWS/RDS", "FreeStorageSpace", "DBInstanceIdentifier", "mysql", { "id": "m2", "visible": false } ],
+        [ ".", "WriteIOPS", ".", ".", { "id": "m5", "visible": false } ],
+        [ ".", "WriteThroughput", ".", ".", { "id": "m6" } ],
+        [ ".", "ReadThroughput", ".", ".", { "id": "m1" } ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "yAxis": {
+        "left": {
+            "label": "",
+            "min": 0
+        }
+    },
+    "annotations": {
+        "horizontal": [
+            {
+                "visible": false,
+                "label": "WARNING",
+                "value": 10,
+                "fill": "below"
+            },
+            {
+                "visible": false,
+                "label": "CRITICAL",
+                "value": 90,
+                "fill": "above"
+            }
+        ]
+    },
+    "stat": "Average",
+    "period": 300,
+    "title": "DiskI/O",
+    "setPeriodToTimeRange": true,
+    "width": 1600,
+    "height": 700,
+    "start": "2021-04-06T05:00:00.000Z",
+    "end": "2021-04-06T05:59:00.000Z"
+}

@@ -5,7 +5,7 @@
 @set HHMMSS=%time:~0,2%%time:~3,2%%time:~6,2%
 
 @rem éëçﬁÇÃèÍèä
-@set TARGET_DIR=C:\work\01_job\codecommit\eg-iot-lambda\
+@set TARGET_DIR=%1
 @set BEFORE_CD=%cd%
 @set ZIP_EXE="C:\Program Files\7-Zip\7z.exe"
 

@@ -8,18 +8,16 @@
 @set HHMMSS=%time:~0,2%%time:~3,2%%time:~6,2%
 
 @rem パラメータ判定
-@rem if "%1" == "" (
-@rem 	echo 開始日時を指定して下さい。
-@rem 	exit /b
-@rem )
-@rem if "%2" == "" (
-@rem 	echo 終了日時を指定して下さい。
-@rem 	exit /b
-@rem )
-@set STARTDT=2021-11-21T00:00:00.000Z
-@set   ENDDT=2021-12-03T09:00:00.000Z
-@rem @set STARTDT=%1
-@rem @set ENDDT=%2
+if "%1" == "" (
+	echo "開始日時(UTC)を指定して下さい。例：2021-11-21T00:00:00.000Z"
+	exit /b
+)
+if "%2" == "" (
+	echo "終了日時(UTC)を指定して下さい。例：2021-12-03T09:00:00.000Z"
+	exit /b
+)
+@set STARTDT=%1
+@set ENDDT=%2
 
 @rem 出力先
 IF NOT EXIST "output" (
